@@ -219,16 +219,12 @@ section {
     }
 
     .home {
-        .btn-primary-sm {
-            display: block;
-            padding: 14px 134px;
+        .btn {
             background: $secondary-color;
             outline: none;
             border: none;
             color: #000;
-            font-size: 11px;
             font-weight: 600;
-            margin: 50px auto;
         }
 
         .banner {
@@ -256,6 +252,13 @@ section {
                 li:not(:last-child) {
                     margin-right: 30px;
                 }
+            }
+
+            .btn-primary-sm {
+                display: block;
+                padding: 14px 134px;
+                font-size: 16px;
+                margin: 50px auto;
             }
 
         }
@@ -304,6 +307,33 @@ section {
                     font-size: 17px;
                     font-weight: 600;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .home {
+
+        .banner {
+            .btn-primary-sm {
+                margin: 30px auto;
+            }
+
+        }
+
+        .overview-wrapper {
+            margin-top: 10px;
+            height: 330px;
+
+        }
+
+        .blog {
+
+            h2 {
+                font-size: 25px;
+                margin-bottom: 30px;
             }
         }
     }
