@@ -38,11 +38,16 @@ h2 {
 
     &:hover {
         background-color: $secondary-color;
-        color: $primary-color;
+        color: $primary-color ;
         opacity: 0.8;
         transition: 0.3s all;
         border: none;
         outline: none;
+    }
+
+    &:active,
+    &:focus {
+        color: $primary-color  !important;
     }
 }
 

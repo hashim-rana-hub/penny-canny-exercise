@@ -41,6 +41,9 @@ h2 {
   border: none;
   outline: none;
 }
+.btn-primary:active, .btn-primary:focus {
+  color: #001534 !important;
+}
 
 section {
   margin: 5rem 0 5rem;
