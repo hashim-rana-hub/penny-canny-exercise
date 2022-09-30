@@ -115,7 +115,7 @@ section {
 }
 .home .overview-wrapper .contact .image {
   margin-bottom: 20px;
-  height: 510px;
+  height: 100%;
 }
 .home .overview-wrapper .contact .image img {
   width: 100%;
