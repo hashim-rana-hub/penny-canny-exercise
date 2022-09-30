@@ -1,4 +1,5 @@
 @import 'variable';
+@import 'mixin';
 
 body {
     font-family: $primary-font;
@@ -15,16 +16,52 @@ p {
 h2 {
     font-size: 2.8125rem;
     font-weight: 700;
+    color: $primary-color;
+
+}
+
+.btn {
+    background: $secondary-color;
+    outline: none;
+    border: none;
+    color: #000;
+    box-shadow: none;
+}
+
+.btn-primary {
+    padding: 1.25rem 10.625rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: none;
+    outline: none;
+    border: none;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-color ;
+        opacity: 0.8;
+        transition: 0.3s all;
+        border: none;
+        outline: none;
+    }
+
+    &:active,
+    &:focus {
+        color: $primary-color  !important;
+    }
 }
 
 section {
     margin: 5rem 0 5rem;
 }
 
+.responsive-btn {
+    display: none;
+}
+
 .home {
     .banner {
-        display: flex;
-        flex-direction: column;
+        @include flex(flex, column);
         align-items: center;
         justify-content: center;
         background-color: $primary-color;
@@ -72,6 +109,7 @@ section {
                     &:hover {
                         transform: scale(1.2);
                         fill: #fff;
+                        transition: 0.4s all;
                     }
                 }
             }
@@ -80,21 +118,19 @@ section {
 
     .overview-wrapper {
         background-color: #f7f8f9;
-        padding: 4.5625rem 9.8125rem;
         height: 25rem;
 
         .contact {
-            display: flex;
-            flex-direction: column;
+            @include flex(flex, column);
             position: relative;
             z-index: 1;
-            top: -50%;
+            top: -20%;
             transform: translateY(-25%);
-            width: 25rem;
-            height: 31.875rem;
+            width: 400px;
 
             .image {
                 margin-bottom: 20px;
+                height: 510px;
 
                 img {
                     width: 100%;
@@ -104,29 +140,31 @@ section {
                 }
             }
 
-            .btn-primary {
-                background-color: $secondary-color;
-                outline: none;
-                border: none;
-                padding: 1.25rem 10.625rem;
-                font-size: 1.125rem;
-                font-weight: 600;
-                color: #000;
+            #contact {
+
+                &:active,
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                    background-color: $secondary-color;
+                }
             }
+
+
         }
 
         .overview {
-            text-align: center;
+            margin-top: 4.375rem;
 
             h2 {
                 margin: 0;
-                text-align: left;
                 margin-bottom: 1.25rem;
             }
 
             .details {
                 p {
-                    text-align: left;
+                    color: $primary-color;
                 }
 
                 p:not(:first-child) {
@@ -141,68 +179,63 @@ section {
             margin-bottom: 2.5rem;
         }
 
-        .column {
-            .card {
-                border: none;
-                margin-bottom: 4.375rem;
+        .card {
+            border: none;
+            margin-bottom: 4.375rem;
 
-                .card-image {
-                    height: 16rem;
+            .card-image {
+                height: 16rem;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .card-body {
+                margin-top: 1.25rem;
+                margin-bottom: 15px;
+                padding: 0;
+
+                span {
+                    font-size: 15px;
+                    color: $text-secondary;
                 }
 
-                .card-body {
-                    margin-top: 1.25rem;
-                    margin-bottom: 15px;
-                    padding: 0;
+                h5 {
+                    font-size: 1.5625rem;
+                    font-weight: 600;
+                    margin: 15px 0 40px;
+                    color: $primary-color;
+                }
 
-                    span {
-                        font-size: 15px;
-                        color: #afb6bf;
+                .read-more {
+                    text-decoration: none;
+                    font-size: 1.0625rem;
+                    font-weight: 600;
+                    color: $secondary-color;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E0AF2F' d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        width: 20px;
+                        height: 20px;
+                        right: -30px;
+                        top: 1px;
+                        transition: .4s all;
                     }
 
-                    h5 {
-                        font-size: 1.5625rem;
-                        font-weight: 600;
-                        margin: 15px 0 40px;
-                    }
-
-                    .read-more {
-                        text-decoration: none;
-                        font-size: 1.0625rem;
-                        font-weight: 600;
-                        color: $secondary-color;
-                        position: relative;
-
+                    &:hover {
                         &::before {
-                            content: "";
-                            position: absolute;
-                            background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E0AF2F' d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
-                            background-repeat: no-repeat;
-                            width: 1.25rem;
-                            height: 1.25rem;
-                            right: -2.5rem;
-                            top: 1px;
-                            transition: .4s all;
-                        }
-
-                        &:hover {
-                            &::before {
-                                transform: translateX(10px);
-                            }
+                            transform: translateX(10px);
                         }
                     }
                 }
             }
-        }
-
-        .load {
-            display: none;
         }
     }
 }
@@ -218,12 +251,13 @@ section {
         margin: 3.75rem auto;
     }
 
+    .responsive-btn {
+        display: block;
+        padding: 0.75rem 7.5rem;
+    }
+
     .home {
         .btn {
-            background: $secondary-color;
-            outline: none;
-            border: none;
-            color: #000;
             font-weight: 600;
         }
 
@@ -234,6 +268,16 @@ section {
             .banner-image {
                 display: block;
                 margin-bottom: 1.25rem;
+                height: 300px;
+                width: 300px;
+                border-radius: 6px;
+                margin-left: auto;
+                margin-right: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             h1 {
@@ -258,22 +302,26 @@ section {
                 display: block;
                 padding: 14px 8.375rem;
                 font-size: 16px;
-                margin: 3.125rem auto;
+                margin: 3.125rem auto 0;
             }
 
         }
 
         .overview-wrapper {
             padding: 0 12px;
-            margin-top: 3.75rem;
+            margin-top: 60px;
             height: 18.75rem;
 
             .contact {
                 display: none;
             }
 
-            .overview h2 {
-                font-size: 1.5625rem;
+            .overview {
+                margin-top: 0;
+
+                h2 {
+                    font-size: 1.5625rem;
+                }
             }
         }
 
@@ -283,30 +331,26 @@ section {
                 margin-bottom: 1.875rem;
             }
 
-            .column {
-                .card {
-                    .card-body {
-                        h5 {
-                            font-size: 1.125rem;
-                            margin: 10px auto 20px;
-                        }
+            .card {
+                margin-bottom: 15px;
 
-                        .read-more {
-                            font-size: 15px;
-                        }
+                .card-body {
+                    h5 {
+                        font-size: 1.125rem;
+                        margin: 10px auto 20px;
+                    }
+
+                    .read-more {
+                        font-size: 15px;
                     }
                 }
             }
 
-            .load {
-                display: block;
-
-                a {
-                    text-decoration: none;
-                    color: #000;
-                    font-size: 1.0625rem;
-                    font-weight: 600;
-                }
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 1.0625rem;
+                font-weight: 600;
             }
         }
     }
