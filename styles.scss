@@ -8,17 +8,17 @@ body {
 }
 
 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: 700;
 }
 
 section {
-    margin: 80px 0 80px;
+    margin: 5rem 0 5rem;
 }
 
 .home {
@@ -63,7 +63,7 @@ section {
                 cursor: pointer;
 
                 &:not(:last-child) {
-                    margin-right: 22px;
+                    margin-right: 1.375rem;
                 }
 
                 svg {
@@ -80,8 +80,8 @@ section {
 
     .overview-wrapper {
         background-color: #f7f8f9;
-        padding: 73px 157px;
-        height: 400px;
+        padding: 4.5625rem 9.8125rem;
+        height: 25rem;
 
         .contact {
             display: flex;
@@ -90,8 +90,8 @@ section {
             z-index: 1;
             top: -50%;
             transform: translateY(-25%);
-            width: 400px;
-            height: 510px;
+            width: 25rem;
+            height: 31.875rem;
 
             .image {
                 margin-bottom: 20px;
@@ -108,8 +108,8 @@ section {
                 background-color: $secondary-color;
                 outline: none;
                 border: none;
-                padding: 20px 170px;
-                font-size: 18px;
+                padding: 1.25rem 10.625rem;
+                font-size: 1.125rem;
                 font-weight: 600;
                 color: #000;
             }
@@ -121,7 +121,7 @@ section {
             h2 {
                 margin: 0;
                 text-align: left;
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
             }
 
             .details {
@@ -130,7 +130,7 @@ section {
                 }
 
                 p:not(:first-child) {
-                    margin-top: 30px;
+                    margin-top: 1.875rem;
                 }
             }
         }
@@ -138,16 +138,16 @@ section {
 
     .blog {
         h2 {
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
         }
 
         .column {
             .card {
                 border: none;
-                margin-bottom: 70px;
+                margin-bottom: 4.375rem;
 
                 .card-image {
-                    height: 256px;
+                    height: 16rem;
 
                     img {
                         width: 100%;
@@ -157,7 +157,7 @@ section {
                 }
 
                 .card-body {
-                    margin-top: 20px;
+                    margin-top: 1.25rem;
                     margin-bottom: 15px;
                     padding: 0;
 
@@ -167,14 +167,14 @@ section {
                     }
 
                     h5 {
-                        font-size: 25px;
+                        font-size: 1.5625rem;
                         font-weight: 600;
                         margin: 15px 0 40px;
                     }
 
                     .read-more {
                         text-decoration: none;
-                        font-size: 17px;
+                        font-size: 1.0625rem;
                         font-weight: 600;
                         color: $secondary-color;
                         position: relative;
@@ -184,9 +184,9 @@ section {
                             position: absolute;
                             background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E0AF2F' d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
                             background-repeat: no-repeat;
-                            width: 20px;
-                            height: 20px;
-                            right: -40px;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            right: -2.5rem;
                             top: 1px;
                             transition: .4s all;
                         }
@@ -215,7 +215,7 @@ section {
 
 @media screen and (max-width: 575px) {
     section {
-        margin: 60px auto;
+        margin: 3.75rem auto;
     }
 
     .home {
@@ -229,65 +229,65 @@ section {
 
         .banner {
             text-align: center;
-            padding: 30px 35px 60px;
+            padding: 1.875rem 2.1875rem 3.75rem;
 
             .banner-image {
                 display: block;
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
             }
 
             h1 {
-                font-size: 25px;
+                font-size: 1.5625rem;
             }
 
             h3 {
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
             }
 
             ul {
                 justify-content: center;
 
                 li:not(:last-child) {
-                    margin-right: 30px;
+                    margin-right: 1.875rem;
                 }
             }
 
             .btn-primary-sm {
                 display: block;
-                padding: 14px 134px;
+                padding: 14px 8.375rem;
                 font-size: 16px;
-                margin: 50px auto;
+                margin: 3.125rem auto;
             }
 
         }
 
         .overview-wrapper {
             padding: 0 12px;
-            margin-top: 60px;
-            height: 300px;
+            margin-top: 3.75rem;
+            height: 18.75rem;
 
             .contact {
                 display: none;
             }
 
             .overview h2 {
-                font-size: 25px;
+                font-size: 1.5625rem;
             }
         }
 
         .blog {
             h2 {
-                font-size: 25px;
-                margin-bottom: 30px;
+                font-size: 1.5625rem;
+                margin-bottom: 1.875rem;
             }
 
             .column {
                 .card {
                     .card-body {
                         h5 {
-                            font-size: 18px;
+                            font-size: 1.125rem;
                             margin: 10px auto 20px;
                         }
 
@@ -304,7 +304,7 @@ section {
                 a {
                     text-decoration: none;
                     color: #000;
-                    font-size: 17px;
+                    font-size: 1.0625rem;
                     font-weight: 600;
                 }
             }
@@ -318,22 +318,22 @@ section {
 
         .banner {
             .btn-primary-sm {
-                margin: 30px auto;
+                margin: 1.875rem auto;
             }
 
         }
 
         .overview-wrapper {
             margin-top: 10px;
-            height: 330px;
+            height: 20.625rem;
 
         }
 
         .blog {
 
             h2 {
-                font-size: 25px;
-                margin-bottom: 30px;
+                font-size: 1.5625rem;
+                margin-bottom: 1.875rem;
             }
         }
     }
