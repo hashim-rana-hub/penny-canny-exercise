@@ -59,6 +59,11 @@ section {
         background-color: $primary;
         padding-bottom: 58px;
         padding-top: 98px;
+        .content-wrapper {
+            @media screen and (min-width: 576px) {
+                margin-left: 56px;
+            }
+        }
 
         .banner-image,
         .btn-primary-sm {
@@ -79,7 +84,6 @@ section {
             color: $secondary;
             font-size: 1.5rem;
             font-weight: 400;
-
         }
 
         ul {
@@ -90,7 +94,6 @@ section {
 
             li {
                 cursor: pointer;
-
                 &:not(:last-child) {
                     margin-right: 1.375rem;
                 }
@@ -110,15 +113,14 @@ section {
 
     .overview-wrapper {
         background-color: #f7f8f9;
-        height: 25rem;
-
+        padding: 70px 0;
         .contact {
             @include flex(flex, column);
-            position: relative;
+            position: absolute;
             z-index: 1;
-            top: -20%;
-            transform: translateY(-25%);
-            max-width: 400px;
+            top: -50%;
+            left: 0;
+            transform: translateY(-45%);
             width: 100%;
 
             .image {
@@ -134,7 +136,6 @@ section {
             }
 
             #contact {
-
                 &:active,
                 &:focus {
                     outline: none;
@@ -143,23 +144,22 @@ section {
                     background-color: $secondary;
                 }
             }
-
-
         }
 
         .overview {
-            margin-top: 4.375rem;
-
+            & > div {
+                @media screen and (min-width: 576px) {
+                    margin-left: 56px;
+                }
+            }
             h2 {
                 margin: 0;
                 margin-bottom: 1.25rem;
             }
-
             .details {
                 p {
                     color: $primary;
                 }
-
                 p:not(:first-child) {
                     margin-top: 1.875rem;
                 }
@@ -288,7 +288,6 @@ section {
         .overview-wrapper {
             padding: 0 12px;
             margin-top: 60px;
-            height: 18.75rem;
             .contact {
                 display: none;
             }
@@ -331,7 +330,6 @@ section {
     .home {
         .overview-wrapper {
             margin-top: 10px;
-            height: 20.625rem;
         }
         .blog {
             h2 {
